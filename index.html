@@ -623,6 +623,82 @@
       line-height: 1.6;
     }
 
+    /* Stadium Photo Gallery */
+    .stadium-gallery {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .stadium-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stadium-main-photo {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+      background: #091017;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .stadium-main-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      max-height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .stadium-side-photos {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stadium-sub-photo {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+      background: #091017;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .stadium-sub-photo img {
+      width: 100%;
+      height: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-tag {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(7, 13, 20, 0.88);
+      backdrop-filter: blur(6px);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .photo-tag span {
+      color: var(--cyan);
+    }
+
     /* LINE CTA Section */
     .cta-section {
       padding: 40px 0 60px;
@@ -1039,6 +1115,30 @@
           <p>
             除了固定跑班訓練，平時有空也歡迎一起約跑步、聊天交流，認識一群熱愛運動的基隆好跑友！
           </p>
+        </div>
+      </div>
+
+      <!-- 體育場全新實景導覽 -->
+      <div class="stadium-gallery">
+        <div class="stadium-main-photo">
+          <img src="./S__28008471_0.jpg" alt="基隆市立綜合體育場 全新海藍色田徑跑道全景">
+          <div class="photo-tag">
+            <span>🏟️</span> 基隆市立體育場・全新海藍色標準 400m 跑道全景
+          </div>
+        </div>
+        <div class="stadium-side-photos">
+          <div class="stadium-sub-photo">
+            <img src="./S__28008470_0.jpg" alt="全新平坦減震 PU 直線跑道與遮陽棚">
+            <div class="photo-tag">
+              <span>⚡</span> 全新減震 PU 賽道與夜間照明
+            </div>
+          </div>
+          <div class="stadium-sub-photo">
+            <img src="./S__28008469_0.jpg" alt="基隆專屬雨天遮雨熱身迴廊">
+            <div class="photo-tag">
+              <span>☔</span> 下雨天免煩惱！專屬遮雨熱身迴廊
+            </div>
+          </div>
         </div>
       </div>
     </div>
